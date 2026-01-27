@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0; // Un peu d'air en haut et en bas
+    max-width: 1240px;
+    margin: 0 auto;
+
+.header-logo {
+    height: 68px; // Taille approximative de la maquette
+
+    @media (max-width: 768px) {
+    height: 47px; // Plus petit sur mobile
+    }
+  }
+}
+
+nav {
+    display: flex;
+    gap: 50px; // Espacement entre "Accueil" et "À Propos"
+
+@media (max-width: 768px) {
+    gap: 20px;
+    text-transform: uppercase; // Souvent en majuscules sur mobile
+}
+
+a {
+    font-size: 24px;
+    font-weight: 500;
+    color: $color-secondary; // On utilise notre variable !
+    
+    @media (max-width: 768px) {
+    font-size: 12px;
+    }
+
+    // Le style quand le lien est actif (grâce à NavLink)
+    &.active {
+    text-decoration: underline;
+    }
+
+    &:hover {
+    color: $color-primary; // Le lien devient rouge au survol
+    }
+}
+}

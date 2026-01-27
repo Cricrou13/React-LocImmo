@@ -1,0 +1,18 @@
+.logements-list {
+  background-color: $color-bg-light; // Le gris clair des variables
+  border-radius: 25px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 colonnes
+  gap: 50px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    background-color: transparent; // Sur mobile, le fond gris disparait souvent
+    padding: 0;
+  }
+}

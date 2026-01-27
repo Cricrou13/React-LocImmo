@@ -1,0 +1,42 @@
+.collapse {
+  margin-bottom: 30px;
+  width: 100%;
+
+  .collapse-header {
+    background-color: $color-primary; // Le rouge Kasa
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 52px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    .collapse-arrow {
+        transition: transform 0.3s ease; // Animation fluide de 0.3 secondes
+        font-size: 24px;
+        display: inline-block; // Important pour que la rotation fonctionne
+
+        &.active {
+            transform: rotate(180deg); 
+        }
+     }
+}
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      color: white; // Force le titre en blanc sur le fond rouge
+    }
+
+  .collapse-content {
+    background-color: $color-bg-light;
+    color: $color-primary;
+    padding: 30px 20px;
+    margin-top: -5px; // Pour "coller" au header
+    border-radius: 0 0 5px 5px;
+    font-size: 18px;
+  }
+}

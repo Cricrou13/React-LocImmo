@@ -1,0 +1,53 @@
+.about-container {
+  max-width: 1240px;
+  margin: 0 auto;
+
+  // On peut ajuster la bannière spécifiquement pour cette page si besoin
+.banner {
+    margin-bottom: 38px;
+    
+    @media (max-width: 768px) {
+      height: 223px;
+      margin-bottom: 19px;
+    }
+  }
+
+.about-sections {
+    max-width: 1023px; // Largeur spécifique de la maquette pour les collapses
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; // Espace entre chaque menu
+    margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+      padding: 0 15px;
+    }
+
+    // On style le composant Collapse quand il est dans la page About
+.collapse {
+    .collapse-header {
+        height: 52px;
+        border-radius: 5px;
+        
+        h2 {
+          font-size: 24px;
+          @media (max-width: 768px) {
+            font-size: 13px;
+          }
+        }
+      }
+      
+      .collapse-content {
+        font-size: 24px;
+        background-color: $color-bg-light;
+        padding: 30px 20px;
+        
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
