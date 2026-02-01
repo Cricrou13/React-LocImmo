@@ -1,0 +1,67 @@
+$color-primary: #FF6060;
+$color-inactive: #E3E3E3;
+$color-base: black;
+
+.logement-container {
+    max-width: 1240px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.logement-header {
+    display: flex;
+    justify-content: space-between; // Écarte le titre et le proprio
+    margin-top: 30px;
+    
+    h1 { color: $color-primary; font-size: 36px; margin: 0; }
+    h3 { font-size: 18px; margin: 5px 0 20px 0; }
+}
+
+.logement-tags {
+    display: flex; gap: 10px;
+    .tag {
+        background: $color-primary; color: white;
+        padding: 5px 20px; border-radius: 10px; font-size: 14px;
+    }
+}
+
+.logement-title-section {
+    color: $color-base;
+}
+
+.logement-host-rating {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 20px;
+}
+
+.host-info {
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    justify-content: flex-end;
+    .host-name { color: $color-primary; text-align: right; width: 80px; }
+    .host-picture { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+}
+
+.rating {
+    font-size: 20px;
+    color: $color-inactive;
+    display: flex;
+    justify-content: flex-end;
+    .active { color: $color-primary; }
+}
+
+.logement-collapse-row {
+    display: flex; gap: 70px; margin-top: 30px;
+    & > div { flex: 1; } // Met les deux collapses à 50% de large
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .logement-header { flex-direction: column; }
+    .logement-host-rating { 
+        flex-direction: row-reverse; 
+        justify-content: space-between; 
+        width: 100%; margin-top: 20px; 
+    }
+    .logement-collapse-row { flex-direction: column; gap: 20px; }
+}

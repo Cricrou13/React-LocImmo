@@ -1,7 +1,7 @@
 import logements from '../data/logements.json';
 import Card from '../components/Card';
 import Banner from '../components/Banner';
-import bannerImage from '../assets/images/home-banner.jpg';
+import bannerImage from '../assets/images/home-banner_1.jpg';
 
 
 function Home() {

@@ -10,7 +10,7 @@
     align-items: center;
     padding: 0 20px;
     height: 52px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     position: relative;
     z-index: 2;
@@ -33,10 +33,16 @@
 
   .collapse-content {
     background-color: $color-bg-light;
-    color: $color-primary;
+    color: $color-secondary;
     padding: 30px 20px;
     margin-top: -5px; // Pour "coller" au header
     border-radius: 0 0 5px 5px;
     font-size: 18px;
   }
 }
+
+  .logement-collapse-row {
+    gap: 76px;
+    display: flex;
+
+  }

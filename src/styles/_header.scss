@@ -2,32 +2,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0; // Un peu d'air en haut et en bas
+    padding: 40px 0;
     max-width: 1240px;
     margin: 0 auto;
 
-.header-logo {
-    height: 68px; // Taille approximative de la maquette
+    .header-logo {
+        height: 68px; 
 
-    @media (max-width: 768px) {
-    height: 47px; // Plus petit sur mobile
-    }
+        @media (max-width: 768px) {
+        height: 47px; 
+        }
   }
 }
 
 nav {
     display: flex;
-    gap: 50px; // Espacement entre "Accueil" et "À Propos"
+    gap: 50px; 
 
 @media (max-width: 768px) {
     gap: 20px;
-    text-transform: uppercase; // Souvent en majuscules sur mobile
+    text-transform: uppercase;
 }
 
 a {
     font-size: 24px;
     font-weight: 500;
-    color: $color-secondary; // On utilise notre variable !
+    color: $color-secondary;
     
     @media (max-width: 768px) {
     font-size: 12px;

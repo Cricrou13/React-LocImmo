@@ -4,7 +4,7 @@ import About from './pages/About';
 import Error from './pages/Error';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Logement from './pages/Logement';
+import Housing from './pages/Housing/Housing';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="/logement/:id" element={<Housing />} />
            {/* On définit explicitement la route 404 pour le Navigate de Logement.jsx */}
         <Route path="/404" element={<Error />} />
            {/* Cette route attrape tout le reste */}

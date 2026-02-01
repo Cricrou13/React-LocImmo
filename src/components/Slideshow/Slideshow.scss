@@ -1,0 +1,64 @@
+.slideshow {
+    position: relative; // INDISPENSABLE pour placer les flèches par-dessus
+    width: 100%;
+    height: 415px;      // Hauteur selon la maquette Desktop
+    border-radius: 25px;
+    overflow: hidden;   // Pour que l'image ne dépasse pas des bords arrondis
+    margin-bottom: 20px;
+
+    /* L'image elle-même */
+    &_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Pour que l'image remplisse tout sans être déformée
+    }
+
+    /* Style commun pour les deux flèches */
+    .arrow-left, .arrow-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); // Centre verticalement parfaitement
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 80px;   // On met une grande taille pour le moment
+        cursor: pointer;
+        z-index: 10;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .arrow-left { left: 20px; }
+    .arrow-right { right: 20px; }
+
+    /* Le compteur (1/4) */
+    .counter {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+/* Style pour le titre et la localisation */
+.logement-container {
+    padding: 0 20px; // Ajoute un peu de marge sur les côtés
+
+    h1 {
+        color: #FF6060; // La couleur corail de Kasa
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    p {
+        color: #FF6060;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
