@@ -12,6 +12,7 @@ $color-base: black;
     display: flex;
     justify-content: space-between; // Écarte le titre et le proprio
     margin-top: 30px;
+    align-items: flex-start;
     
     h1 { color: $color-primary; font-size: 36px; margin: 0; }
     h3 { font-size: 18px; margin: 5px 0 20px 0; }
@@ -30,7 +31,10 @@ $color-base: black;
 }
 
 .logement-host-rating {
-    display: flex; flex-direction: column; align-items: flex-end; gap: 20px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 20px;
 }
 
 .host-info {

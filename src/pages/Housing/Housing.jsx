@@ -23,35 +23,36 @@ function Housing() {
             {/* Affichage du carrousel avec les images du logement */}
             <Slideshow pictures={ficheLogement.pictures} />
 
-            {/* Section Titre et Localisation */}
-            <div className="logement-header">
-                <div className="logement-title-section">
-                    <h1>{ficheLogement.title}</h1>
-                    <h3>{ficheLogement.location}</h3>
-                </div>
-            </div>
-        
-            {/* SECTION DES TAGS */}
-            <div className="logement-tags">
-                {ficheLogement.tags.map((tag, index) => (
-                    <span key={index} className="tag">{tag}</span>
-                ))}
-            </div>
+           <div className="logement-header">
+    {/* BLOC GAUCHE : Titre + Localisation + Tags */}
+    <div className="logement-infos-section">
+        <div className="logement-title-section">
+            <h1>{ficheLogement.title}</h1>
+            <h3>{ficheLogement.location}</h3>
+        </div>
+        <div className="logement-tags">
+            {ficheLogement.tags.map((tag, index) => (
+                <span key={index} className="tag">{tag}</span>
+            ))}
+        </div>
+    </div>
 
-            <div className="host-info">
-                <span className="host-name">{ficheLogement.host.name}</span>
-                <img className="host-picture" src={ficheLogement.host.picture} alt={ficheLogement.host.name} />
-            </div>
-        
-            <div className="rating">
-            {/* On crée un tableau de 5 pour afficher 5 étoiles */}
+    {/* BLOC DROIT : Host (en haut) et Rating (juste en dessous) */}
+    <div className="logement-host-rating">
+        <div className="host-info">
+            <span className="host-name">{ficheLogement.host.name}</span>
+            <img className="host-picture" src={ficheLogement.host.picture} alt={ficheLogement.host.name} />
+        </div>
+        <div className="rating">
             {[1, 2, 3, 4, 5].map((star) => (
                 <i 
                     key={star} 
                     className={`fa-solid fa-star ${ficheLogement.rating >= star ? 'active' : 'inactive'}`}
                 ></i>
             ))}
-            </div>
+        </div>
+    </div>
+</div>
 
             {/*  Section des Collapses (Description et Équipements) */}
             <div className="logement-collapse-row">
