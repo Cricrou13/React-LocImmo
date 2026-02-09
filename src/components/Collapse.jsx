@@ -2,7 +2,11 @@ import { useState } from "react";
 
 function Collapse(props) {
       // Déclaration du State pour savoir si c'est ouvert ou fermé
-      const [isOpen, setIsOpen] = useState(false);
+
+      const stateArray = useState(false);
+      
+      const isOpen = stateArray[0];
+      const setIsOpen = stateArray[1];
 
     return (
         <div className="collapse">

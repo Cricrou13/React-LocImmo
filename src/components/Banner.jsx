@@ -1,9 +1,9 @@
-function Banner ({ image, text }) {
+function Banner (props) {
     return (
         <div className="banner">
-            <img src={image} alt="Bannière" className="banner-img" />
+            <img src={props.image} alt="Bannière" className="banner-img" />
             <div className="banner-overlay"></div>
-            {text && <h1 className="banner-text">{text}</h1>}
+            {props.text && <h1 className="banner-text">{props.text}</h1>}
         </div>
     );
 }
