@@ -2,14 +2,14 @@ import { Link } from "react-router-dom"
 
 // On reçoit les données (props) entre les parenthèses
 // déstructuration pour récupérer directement title et cover
-function Card({ id, title, cover }) {
+function Card(props) {
   return (
-    <Link to={`/logement/${id}`} className="card">
+    <Link to={`/logement/${props.id}`} className="card">
 
     <article className="card">
-      <img src={cover} alt={title} className="card-image" />
+      <img src={props.cover} alt={props.title} className="card-image" />
       <div className="card-layer"></div>
-      <h3 className="card-title">{title}</h3>
+      <h3 className="card-title">{props.title}</h3>
     </article>
     </Link>
   );

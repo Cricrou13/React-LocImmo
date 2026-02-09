@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Collapse({ title, content }) {
+function Collapse(props) {
       // Déclaration du State pour savoir si c'est ouvert ou fermé
       const [isOpen, setIsOpen] = useState(false);
 
@@ -8,7 +8,7 @@ function Collapse({ title, content }) {
         <div className="collapse">
              {/* Gestion de l'événement clic */}
             <div className="collapse-header" onClick={()=> setIsOpen(!isOpen)}>
-                <h2>{title}</h2>
+                <h2>{props.title}</h2>
                 <span className={`collapse-arrow ${isOpen ? 'active' : ''}`}>
                     ^
                 </span>
@@ -16,7 +16,7 @@ function Collapse({ title, content }) {
  */}            </div>
             
              {/* Affichage conditionnel selon le State */}
-             {isOpen && <div className="collapse-content">{content}</div>}
+             {isOpen && <div className="collapse-content">{props.content}</div>}
         </div>
 );
 }

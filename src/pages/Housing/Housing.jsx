@@ -8,7 +8,9 @@ import './Housing.scss';
 
 function Housing() {
     //On récupère l'ID qui est dans l'URL
-    const { id } = useParams();
+
+    const params = useParams();
+    const id = params.id
 
     //On cherche le logement correspondant dans nos données
     const ficheLogement = logements.find((item) => item.id === id);
