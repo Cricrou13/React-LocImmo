@@ -4,9 +4,7 @@ import "./Slideshow.scss";
 const Slideshow = (props) => {
 // 'pictures' est le tableau d'URLs qui vient du JSON
 
-const stateArray = useState [0];
-const currentIndex = stateArray[0];
-const SetCurrentIndex = stateArray[1];
+ const [currentIndex, SetCurrentIndex] = useState(0);
 
 /* Si je suis à la dernière image, je reviens à la première (0). Sinon, je fais +1. */
 const nextSlide = () => {
