@@ -13,15 +13,17 @@ function App() {
         <Header /> 
       </div>
     <main> 
+      <BrowserRouter basename="/React-LocImmo">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/logement/:id" element={<Housing />} />
-           {/* On définit explicitement la route 404 pour le Navigate de Logement.jsx */}
-        <Route path="/404" element={<Error />} />
-           {/* Cette route attrape tout le reste */}
-        <Route path="*" element={<Error />} />
-      </Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/logement/:id" element={<Housing />} />
+            {/* On définit explicitement la route 404 pour le Navigate de Logement.jsx */}
+          <Route path="/404" element={<Error />} />
+            {/* Cette route attrape tout le reste */}
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
     </main> 
 
     <Footer />
