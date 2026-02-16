@@ -9,7 +9,7 @@ import './Housing.scss';
 function Housing() {
     //On récupère l'ID qui est dans l'URL
 
-    const params = useParams();
+    const params = useParams(); /* Hook */
     const id = params.id
 
     //On cherche le logement correspondant dans nos données

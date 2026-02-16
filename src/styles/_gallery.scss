@@ -12,7 +12,7 @@
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    background-color: transparent; // Sur mobile, le fond gris disparait souvent
+    background-color: transparent; 
     padding: 0;
   }
 }
