@@ -29,7 +29,7 @@
       user-select: none;
 
       &.active {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
       }
     }
   }
@@ -37,11 +37,11 @@
   // LE WRAPPER DOIT ÊTRE ICI (frère du header)
   .collapse-content-wrapper {
     display: grid;
-    grid-template-rows: 0fr; // Fermé par défaut
+    grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s ease-out;
     background: #F6F6F6;
     border-radius: 0 0 10px 10px;
-    margin-top: -10px; // Pour passer sous l'arrondi du header
+    margin-top: -10px;
     overflow: hidden; // ESSENTIEL pour la fermeture
 
     &.opened {
@@ -49,7 +49,7 @@
     }
 
     .collapse-content {
-      min-height: 0; // Obligatoire pour le grid
+      min-height: 0;
       padding: 0 20px;
       color: $color-secondary;
       font-size: 18px;
@@ -57,7 +57,7 @@
     }
 
     &.opened .collapse-content {
-      padding: 30px 20px 20px 20px; // On ajoute du padding en haut pour décoller du header
+      padding: 30px 20px 20px 20px;
     }
   }
 }
