@@ -1,28 +1,29 @@
 import { useState } from "react";
 
 function Collapse(props) {
-      // Déclaration du State pour savoir si c'est ouvert ou fermé
-
-      const stateArray = useState(false);
-      
-      const isOpen = stateArray[0];
-      const setIsOpen = stateArray[1];
+    // Utilisation de la déstructuration standard (plus propre que stateArray)
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className="collapse">
-             {/* Gestion de l'événement clic */}
-            <div className="collapse-header" onClick={()=> setIsOpen(!isOpen)}>
+            <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
                 <h2>{props.title}</h2>
+                {/* On garde ta span, on lui ajoute une classe active pour la rotation */}
                 <span className={`collapse-arrow ${isOpen ? 'active' : ''}`}>
                     ^
                 </span>
-{/*                 <span className={isOpen ? 'arrow-up' : 'arrow-down'}>^</span>
- */}            </div>
-            
-             {/* Affichage conditionnel selon le State */}
-             {isOpen && <div className="collapse-content">{props.content}</div>}
+            </div>
+
+            {/* 
+                classe dynamique pour piloter l'animation CSS
+            */}
+            <div className={`collapse-content-wrapper ${isOpen ? 'opened' : 'closed'}`}>
+                <div className="collapse-content">
+                    {props.content}
+                </div>
+            </div>
         </div>
-);
+    );
 }
 
 export default Collapse;

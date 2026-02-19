@@ -3,46 +3,68 @@
   width: 100%;
 
   .collapse-header {
-    background-color: $color-primary; // Le rouge Kasa
+    background-color: $color-primary; 
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 52px;
-    border-radius: 15px;
+    border-radius: 10px; 
     cursor: pointer;
     position: relative;
     z-index: 2;
 
-    .collapse-arrow {
-        transition: transform 0.3s ease; // Animation fluide de 0.3 secondes
-        font-size: 24px;
-        display: inline-block; // Important pour que la rotation fonctionne
-
-        &.active {
-            transform: rotate(180deg); 
-        }
-     }
-}
     h2 {
       font-size: 24px;
       font-weight: 500;
-      color: white; // Force le titre en blanc sur le fond rouge
+      color: white;
+      margin: 0;
     }
 
-  .collapse-content {
-    background-color: $color-bg-light;
-    color: $color-secondary;
-    padding: 30px 20px;
-    margin-top: -5px; // Pour "coller" au header
-    border-radius: 0 0 5px 5px;
-    font-size: 18px;
+    .collapse-arrow {
+      transition: transform 0.3s ease-in-out;
+      font-size: 24px;
+      display: inline-block;
+      user-select: none;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // LE WRAPPER DOIT ÊTRE ICI (frère du header)
+  .collapse-content-wrapper {
+    display: grid;
+    grid-template-rows: 0fr; // Fermé par défaut
+    transition: grid-template-rows 0.3s ease-out;
+    background: #F6F6F6;
+    border-radius: 0 0 10px 10px;
+    margin-top: -10px; // Pour passer sous l'arrondi du header
+    overflow: hidden; // ESSENTIEL pour la fermeture
+
+    &.opened {
+      grid-template-rows: 1fr; // Ouvert
+    }
+
+    .collapse-content {
+      min-height: 0; // Obligatoire pour le grid
+      padding: 0 20px;
+      color: $color-secondary;
+      font-size: 18px;
+      transition: padding 0.3s ease;
+    }
+
+    &.opened .collapse-content {
+      padding: 30px 20px 20px 20px; // On ajoute du padding en haut pour décoller du header
+    }
   }
 }
 
-  .logement-collapse-row {
-    gap: 76px;
-    display: flex;
-
-  }
+// Pour la page Logement (côte à côte)
+.logement-collapse-row {
+  display: flex;
+  gap: 76px;
+  width: 100%;
+}
