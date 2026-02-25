@@ -4,7 +4,6 @@ import logements from '../../data/logements.json';
 // On importe les composants nécessaires
 import Slideshow from '../../components/Slideshow/Slideshow';
 import Collapse from '../../components/Collapse';
-import './Housing.scss';
 
 function Housing() {
     //On récupère l'ID qui est dans l'URL

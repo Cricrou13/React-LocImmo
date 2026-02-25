@@ -42,8 +42,12 @@
         color: white;
         font-size: 18px;
         font-weight: 500;
+
+       @media (max-width: 768px) {
+        display: none;
+        }  
     }
-}
+ }
 
 /* Style pour le titre et la localisation */
 .logement-container {

@@ -1,9 +1,11 @@
+@use 'variables' as v; 
+
 .error-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $color-primary;
+  color: v.$color-primary;
   text-align: center;
   padding: 100px 20px;
 
@@ -27,9 +29,10 @@
     }
   }
 
-  .error-link {
+  .error-Link {
     font-size: 18px;
     text-decoration: underline;
+    color: v.$color-secondary;
     
     @media (max-width: 768px) {
       font-size: 14px;

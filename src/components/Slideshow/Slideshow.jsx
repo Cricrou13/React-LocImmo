@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Slideshow.scss";
 
 const Slideshow = (props) => {
 // 'pictures' est le tableau d'URLs qui vient du JSON

@@ -1,9 +1,11 @@
+@use 'variables' as v; 
+
 .collapse {
   margin-bottom: 30px;
   width: 100%;
 
   .collapse-header {
-    background-color: $color-primary; 
+    background-color: v.$color-primary; 
     color: white;
     display: flex;
     justify-content: space-between;
@@ -51,7 +53,7 @@
     .collapse-content {
       min-height: 0;
       padding: 0 20px;
-      color: $color-secondary;
+      color: v.$color-secondary;
       font-size: 18px;
       transition: padding 0.3s ease;
     }

@@ -1,6 +1,4 @@
-$color-primary: #FF6060;
-$color-inactive: #E3E3E3;
-$color-base: black;
+@use 'variables' as v;
 
 .logement-container {
     max-width: 1240px;
@@ -14,20 +12,16 @@ $color-base: black;
     margin-top: 30px;
     align-items: flex-start;
     
-    h1 { color: $color-primary; font-size: 36px; margin: 0; }
-    h3 { font-size: 18px; margin: 5px 0 20px 0; }
+    h1 { color: v.$color-primary; font-size: 36px; margin: 0; }
+    h3 { font-size: 18px; margin: 5px 0 20px 0; color: v.$color-secondary;}
 }
 
 .logement-tags {
     display: flex; gap: 10px;
     .tag {
-        background: $color-primary; color: white;
+        background: v.$color-primary; color: white;
         padding: 5px 20px; border-radius: 10px; font-size: 14px;
     }
-}
-
-.logement-title-section {
-    color: $color-base;
 }
 
 .logement-host-rating {
@@ -42,16 +36,16 @@ $color-base: black;
     align-items: center; 
     gap: 10px;
     justify-content: flex-end;
-    .host-name { color: $color-primary; text-align: right; width: 80px; }
+    .host-name { color: v.$color-primary; text-align: right; width: 80px; }
     .host-picture { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
 }
 
 .rating {
     font-size: 20px;
-    color: $color-inactive;
+    color: v.$color-inactive;
     display: flex;
     justify-content: flex-end;
-    .active { color: $color-primary; }
+    .active { color: v.$color-primary; }
 }
 
 .logement-collapse-row {
@@ -66,6 +60,7 @@ $color-base: black;
         flex-direction: row-reverse; 
         justify-content: space-between; 
         width: 100%; margin-top: 20px; 
+        align-items: center;
     }
     .logement-collapse-row { flex-direction: column; gap: 20px; }
 }

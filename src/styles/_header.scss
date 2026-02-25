@@ -1,3 +1,4 @@
+@use 'variables' as v; 
 .header {
     display: flex;
     justify-content: space-between;
@@ -19,19 +20,16 @@ nav {
 a {
     font-size: 24px;
     font-weight: 500;
-    color: $color-secondary;
-    
-    @media (max-width: 768px) {
-    font-size: 12px;
-    }
-
-    // Le style quand le lien est actif (grâce à NavLink)
+    color: v.$color-secondary;
     &.active {
     text-decoration: underline;
     }
-
-    &:hover {
-    color: $color-primary; // Le lien devient rouge au survol
+    
+    @media (max-width: 768px) {
+    font-size: 12px;
+    &.active {
+        text-decoration: none;
+    }
     }
 }
 }
