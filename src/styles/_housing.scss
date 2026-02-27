@@ -19,7 +19,7 @@
 .logement-tags {
     display: flex; gap: 10px;
     .tag {
-        background: v.$color-primary; color: white;
+        background: v.$color-primary; color: v.$color-base;
         padding: 5px 20px; border-radius: 10px; font-size: 14px;
     }
 }

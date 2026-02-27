@@ -9,7 +9,7 @@
 
 body {
   font-family: v.$font-main;
-  color: v.$color-primary; // Couleur par défaut du texte chez Kasa
+  color: v.$color-primary; 
   -webkit-font-smoothing: antialiased;
 }
 
@@ -24,6 +24,6 @@ ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 
 img {
-  width: 200px; /* Force une taille pour voir si elles reviennent */
+  width: 200px;
   height: 68px;
 }

@@ -20,7 +20,7 @@
         transform: translateY(-50%); // Centre verticalement parfaitement
         background: transparent;
         border: none;
-        color: white;
+        color: v.$color-base;
         font-size: 79px;   // On met une grande taille pour le moment
         cursor: pointer;
         z-index: 10;
@@ -28,6 +28,9 @@
         &:hover {
             opacity: 0.8;
         }
+     @media (max-width: 768px) {
+        font-size: 20px;
+     }
     }
 
     .arrow-left { left: 20px; }
@@ -39,7 +42,7 @@
         bottom: 25px;
         left: 50%;
         transform: translateX(-50%);
-        color: white;
+        color: v.$color-base;
         font-size: 18px;
         font-weight: 500;
 
@@ -54,14 +57,14 @@
     padding: 0 20px;
 
     h1 {
-        color: #FF6060; // La couleur corail de Kasa
+        color: v.$color-primary; // La couleur corail de Kasa
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 5px;
     }
 
     p {
-        color: #FF6060;
+        color: v.$color-primary;
         font-size: 18px;
         margin-bottom: 20px;
     }

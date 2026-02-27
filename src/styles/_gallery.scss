@@ -1,7 +1,7 @@
 @use 'variables' as v; 
 
 .logements-list {
-  background-color: v.$color-bg-light; // Le gris clair des variables
+  background-color: v.$color-bg-light;
   border-radius: 25px;
   padding: 50px;
   display: grid;

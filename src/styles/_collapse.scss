@@ -6,7 +6,7 @@
 
   .collapse-header {
     background-color: v.$color-primary; 
-    color: white;
+    color: v.$color-base;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +20,7 @@
     h2 {
       font-size: 24px;
       font-weight: 500;
-      color: white;
+      color: v.$color-base;
       margin: 0;
     }
 
@@ -41,7 +41,7 @@
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s ease-out;
-    background: #F6F6F6;
+    background: v.$color-bg-light;
     border-radius: 0 0 10px 10px;
     margin-top: -10px;
     overflow: hidden; // ESSENTIEL pour la fermeture
