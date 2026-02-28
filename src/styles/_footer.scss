@@ -1,3 +1,4 @@
+@use 'variables' as v; 
 .footer {
     background-color: v.$color-secondary;
     padding: 60px 0 30px;
@@ -6,10 +7,11 @@
     align-items: center;
     gap: 30px;
     margin-top: 50px;
-    height: 209px;
+    min-height: 209px;
 
     img {
-        width: 122px;
+        width: 150px;
+    
         }
 
         p {

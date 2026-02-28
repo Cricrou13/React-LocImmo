@@ -4,6 +4,10 @@
   margin-bottom: 30px;
   width: 100%;
 
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+
   .collapse-header {
     background-color: v.$color-primary; 
     color: v.$color-base;
@@ -11,24 +15,46 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    height: 52px;
+    height: 52px; 
     border-radius: 10px; 
     cursor: pointer;
     position: relative;
     z-index: 2;
+
+    // CORRECTION MOBILE DU BANDEAU
+    @media (max-width: 768px) {
+      height: 30px;     
+      padding: 0 10px;  
+      border-radius: 5px; 
+    }
 
     h2 {
       font-size: 24px;
       font-weight: 500;
       color: v.$color-base;
       margin: 0;
+
+      // CORRECTION MOBILE DU TITRE
+      @media (max-width: 768px) {
+        font-size: 13px; 
+      }
     }
 
     .collapse-arrow {
       transition: transform 0.3s ease-in-out;
-      font-size: 24px;
-      display: inline-block;
+      display: flex;
+      align-items: center;
       user-select: none;
+
+      img {
+        height: 13px;
+        width: 24px;
+        
+        @media (max-width: 768px) {
+          width: 16px;
+          height: auto;
+        }
+      }
 
       &.active {
         transform: rotate(-180deg);
@@ -36,18 +62,17 @@
     }
   }
 
-  // LE WRAPPER DOIT ÊTRE ICI (frère du header)
   .collapse-content-wrapper {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-out;
+    transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     background: v.$color-bg-light;
     border-radius: 0 0 10px 10px;
     margin-top: -10px;
-    overflow: hidden; // ESSENTIEL pour la fermeture
+    overflow: hidden;
 
     &.opened {
-      grid-template-rows: 1fr; // Ouvert
+      grid-template-rows: 1fr;
     }
 
     .collapse-content {
@@ -56,17 +81,35 @@
       color: v.$color-secondary;
       font-size: 18px;
       transition: padding 0.3s ease;
+
+      @media (max-width: 768px) {
+        font-size: 12px; 
+      }
     }
 
     &.opened .collapse-content {
       padding: 30px 20px 20px 20px;
+
+      @media (max-width: 768px) {
+        padding: 15px 10px 10px 10px; 
+      }
     }
   }
 }
 
-// Pour la page Logement (côte à côte)
+// Pour la page Logement (Conteneur des deux collapses)
 .logement-collapse-row {
   display: flex;
   gap: 76px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  & > div {
+    flex: 1;
+    width: 100%;
+  }
 }

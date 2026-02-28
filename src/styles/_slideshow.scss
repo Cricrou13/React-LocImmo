@@ -1,42 +1,47 @@
+@use 'variables' as v; 
+
 .slideshow {
-    position: relative; // INDISPENSABLE pour placer les flèches par-dessus
+    position: relative; 
     width: 100%;
-    height: 415px;      // Hauteur selon la maquette Desktop
+    height: 415px;     
     border-radius: 25px;
-    overflow: hidden;   // Pour que l'image ne dépasse pas des bords arrondis
+    overflow: hidden;   
     margin-bottom: 20px;
 
-    /* L'image elle-même */
+    // Version Mobile
+    @media (max-width: 768px) {
+        height: 255px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
     &_image {
         width: 100%;
         height: 100%;
-        object-fit: cover; // Pour que l'image remplisse tout sans être déformée
+        object-fit: cover; 
     }
 
-    /* Style commun pour les deux flèches */
     .arrow-left, .arrow-right {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%); // Centre verticalement parfaitement
+        transform: translateY(-50%);
         background: transparent;
         border: none;
         color: v.$color-base;
-        font-size: 79px;   // On met une grande taille pour le moment
+        font-size: 79px; 
         cursor: pointer;
         z-index: 10;
         
-        &:hover {
-            opacity: 0.8;
+        &:hover { opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            font-size: 24px; 
         }
-     @media (max-width: 768px) {
-        font-size: 20px;
-     }
     }
 
-    .arrow-left { left: 20px; }
-    .arrow-right { right: 20px; }
+    .arrow-left { left: 20px; @media (max-width: 768px) { left: 5px; } }
+    .arrow-right { right: 20px; @media (max-width: 768px) { right: 5px; } }
 
-    /* Le compteur (1/4) */
     .counter {
         position: absolute;
         bottom: 25px;
@@ -46,26 +51,8 @@
         font-size: 18px;
         font-weight: 500;
 
-       @media (max-width: 768px) {
-        display: none;
+        @media (max-width: 768px) {
+            display: none;
         }  
-    }
- }
-
-/* Style pour le titre et la localisation */
-.logement-container {
-    padding: 0 20px;
-
-    h1 {
-        color: v.$color-primary; // La couleur corail de Kasa
-        font-size: 36px;
-        font-weight: 500;
-        margin-bottom: 5px;
-    }
-
-    p {
-        color: v.$color-primary;
-        font-size: 18px;
-        margin-bottom: 20px;
     }
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import vectorLogo from '../assets/images/Vector.svg'; 
 
 function Collapse(props) {
     // Utilisation de la déstructuration standard (plus propre que stateArray)
@@ -10,7 +11,7 @@ function Collapse(props) {
                 <h2>{props.title}</h2>
                 {/* On garde ta span, on lui ajoute une classe active pour la rotation */}
                 <span className={`collapse-arrow ${isOpen ? 'active' : ''}`}>
-                    ^
+                    <img src={vectorLogo} alt="chevron"/>
                 </span>
             </div>
 

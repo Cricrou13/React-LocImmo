@@ -7,7 +7,7 @@ function Card(props) {
     <Link to={`/logement/${props.id}`} className="card">
 
     <article className="card">
-      <img src={props.cover} alt={props.title} className="card-image" />
+      <img src={props.cover} alt={props.title} className="card-image" loading="lazy" />
       <div className="card-layer"></div>
       <h3 className="card-title">{props.title}</h3>
     </article>

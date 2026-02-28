@@ -26,12 +26,12 @@ if (props.pictures.length <= 1) {
 
 return (
     <div className="slideshow">
-        <button className="arrow-left" onClick={prevSlide}>
+        <button className="arrow-left" aria-label="Image pécedente" onClick={prevSlide}>
             <i className="fa-solid fa-chevron-left"></i>
         </button>
         <img src={props.pictures[currentIndex]} alt="Logement" className="slideshow_image"/>
 
-        <button className="arrow-right" onClick={nextSlide}>
+        <button className="arrow-right" aria-label="Image suivante" onClick={nextSlide}>
             <i className="fa-solid fa-chevron-right"></i>
             </button>
         <span className="counter">{currentIndex + 1} / {props.pictures.length}</span>
